@@ -38,7 +38,7 @@ def mr_tab(df:pd.DataFrame)->pd.DataFrame:
     cases = df.shape[0]
     Total_Response = sum(df.sum(axis=0).reset_index()[0].to_list()) #type:ignore
     return_df = df.sum(axis=0).reset_index().rename(columns={"index":"Choice", 0:"Frequency"}) #type:ignore
-    return_df["Responce Percentage"] =round((return_df["Frequency"]/Total_Response), 4) #type:ignore
+    return_df["Response Percentage"] =round((return_df["Frequency"]/Total_Response), 4) #type:ignore
     return_df["Case Percentage"] = round((return_df["Frequency"]/cases), 4) #type:ignore
     return return_df
 
