@@ -46,9 +46,3 @@ Contributions are welcome! If you have additional utilities to contribute, feel 
 ## License
 
 This repository is licensed under the MIT License.
-
----
-
-### **Description for Repository**
-`tete_utils` is a collection of Python utilities for data processing and survey analysis. It includes tools for encoding retrieval from XLSForm questions, multiple-choice question analysis similar to Stata’s `mrtab` command, and more utilities planned for future releases.
-
