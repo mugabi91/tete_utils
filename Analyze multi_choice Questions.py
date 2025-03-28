@@ -5,7 +5,7 @@ import os
 def load_data(file_location:str|None, sheet_name:str|None=None)-> pd.DataFrame:
     if file_location is None:
         raise ValueError("Please provide a file location")
-    df = pd.read_excel(file_location, sheet_name=sheet_name) #type:ignore
+    df = pd.read_excel(file_location, sheet_name=sheet_name) if file_location.split(".")[-1] in ["xlsx"] else pd.read_csv(file_location) #type:ignore
     print(df.head(5)) #type:ignore
     return df  #type:ignore
 
