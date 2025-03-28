@@ -103,8 +103,8 @@ def main(interested_catergory:str|list[str]|None=None) -> None:
 if __name__ == "__main__":
     DATA_FILE = r"D:\movie centre\RAP_test_-_all_versions_-_False_-_2024-12-17-15-59-30.xlsx"
     SHEET_NAME = "collect_names"
-    MULTI_CHOICE_COLUMNS = ["Has_Chronic_disease/","Has_Disabililty/"]
-    main(["Gender","Education_level"]) #type:ignore
+    MULTI_CHOICE_COLUMNS = ["Has_Chronic_disease/","Has_Disabililty/","Extra_income_sources/"]
+    main(["Gender","Marital_status"]) #type:ignore
     
     ### read me ###
     """

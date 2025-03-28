@@ -1,7 +1,7 @@
 
 import pandas as pd
 
-def read_data(file_location:str|None,sheet_name:str|None) -> pd.DataFrame|None:
+def read_data(file_location:str|None, sheet_name:str|None) -> pd.DataFrame|None:
     if file_location is not  None and sheet_name is not None:
         df = pd.read_excel(file_location,sheet_name=sheet_name) # type:ignore 
         df.columns = [col_name.strip() for col_name in df.columns]
@@ -29,7 +29,7 @@ def get_encoding_dict(selection_option:str, file_location:str ,sheet_name:str="c
     """
     return_dict = {}
     dataframe: pd.DataFrame | None = read_data(file_location=file_location, sheet_name=sheet_name)
-    df_Filtered = filter_df(dataframe,selection_option) # type:ignore
+    df_Filtered = filter_df(dataframe, selection_option) # type:ignore
     for name, label in zip(df_Filtered.name, df_Filtered.label): #type:ignore
         if encodings_type == "str":
             temp_dict = {  #type:ignore
